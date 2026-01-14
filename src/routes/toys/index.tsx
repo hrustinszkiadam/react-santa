@@ -3,10 +3,12 @@ import { useSuspenseQuery } from '@tanstack/react-query';
 import Loading from '@/components/loading';
 import ToysTable from '@/components/toys/toys-table';
 import { useSantaQuery } from '@/components/santa-query-provider';
+import ErrorBoundary from '@/components/error-boundary';
 
 export const Route = createFileRoute('/toys/')({
   component: RouteComponent,
   pendingComponent: Loading,
+  errorComponent: ErrorBoundary,
 });
 
 function RouteComponent() {
