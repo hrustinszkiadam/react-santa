@@ -1,0 +1,12 @@
+{
+  "projectName": "react-santa",
+  "mode": "file-router",
+  "typescript": true,
+  "tailwind": true,
+  "packageManager": "bun",
+  "addOnOptions": {},
+  "git": true,
+  "version": 1,
+  "framework": "react-cra",
+  "chosenAddOns": ["eslint", "compiler", "form", "shadcn", "t3env", "table", "tanstack-query"]
+}
