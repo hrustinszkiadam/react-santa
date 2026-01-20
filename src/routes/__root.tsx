@@ -24,7 +24,7 @@ export const Route = createRootRouteWithContext<SantaRouterContext>()({
         storageKey='vite-ui-theme'
       >
         <div className='relative flex min-h-screen w-full flex-col'>
-          <div className='fixed inset-0 -z-10 overflow-hidden opacity-50'>
+          <div className='fixed inset-0 -z-10 hidden overflow-hidden opacity-25 dark:block'>
             <FloatingLines
               enabledWaves={['top', 'middle', 'bottom']}
               // Array - specify line count per wave; Number - same count for all waves
