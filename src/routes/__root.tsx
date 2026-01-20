@@ -10,6 +10,7 @@ import ErrorBoundary from '@/components/error-boundary';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Header } from '@/components/header';
 import { SantaQueryProvider } from '@/components/santa-query-provider';
+import FloatingLines from '@/components/FloatingLines';
 
 interface SantaRouterContext {
   queryClient: QueryClient;
@@ -22,7 +23,20 @@ export const Route = createRootRouteWithContext<SantaRouterContext>()({
         defaultTheme='system'
         storageKey='vite-ui-theme'
       >
-        <div className='flex min-h-screen w-full flex-col'>
+        <div className='relative flex min-h-screen w-full flex-col'>
+          <div className='fixed inset-0 -z-10 overflow-hidden opacity-50'>
+            <FloatingLines
+              enabledWaves={['top', 'middle', 'bottom']}
+              // Array - specify line count per wave; Number - same count for all waves
+              lineCount={10}
+              // Array - specify line distance per wave; Number - same distance for all waves
+              lineDistance={5}
+              bendRadius={5}
+              bendStrength={-0.5}
+              interactive={false}
+              parallax={true}
+            />
+          </div>
           <Header />
           <Outlet />
           <Toaster position='bottom-right' />

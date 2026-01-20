@@ -22,7 +22,7 @@ function RouteComponent() {
   return (
     <div className='flex grow items-center justify-center p-6'>
       <div className='w-full max-w-4xl space-y-4'>
-        <Card>
+        <Card className='bg-transparent backdrop-blur-xl'>
           <CardHeader>
             <div className='flex items-start justify-between'>
               <div>

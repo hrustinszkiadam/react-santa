@@ -19,7 +19,7 @@ function RouteComponent() {
 
   return (
     <div className='flex grow items-center justify-center'>
-      <div className='w-full max-w-xl rounded-xl border p-4'>
+      <div className='w-full max-w-xl rounded-xl border p-4 backdrop-blur-xl'>
         <ChildForm
           onSubmit={updateChild}
           child={child}
